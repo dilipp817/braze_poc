@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "259507214166",
+    "project_id": "braze-demo",
+    "storage_bucket": "braze-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259507214166:android:150d5ff7eea20a011228f7",
+        "android_client_info": {
+          "package_name": "com.fnk.braze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259507214166-108fmsugra6pta5jhhs4cplvbc95cdob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBojr3Ix-2an4o6Mko_QYjkzRiVRqKfLZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259507214166-108fmsugra6pta5jhhs4cplvbc95cdob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

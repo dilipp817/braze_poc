@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
+    <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+
+<!--    locaton tracking-->
+    <bool name="com_braze_enable_location_collection">true</bool>
+
+<!--    token registration-->
+    <bool translatable="false" name="com_braze_firebase_cloud_messaging_registration_enabled">true</bool>
+    <string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">438592012327</string>
+
+<!--    Icons in Notifications-->
+    <drawable name="com_braze_push_small_notification_icon">@drawable/btn_clear</drawable>
+    <drawable name="com_braze_push_large_notification_icon">@drawable/collapse</drawable>
+
+<!--    background color of notification-->
+    <integer name="com_braze_default_notification_accent_color">0xFFf33e3e</integer>
+
+<!--    enabling deeplink in notifications-->
+    <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
+
+
+</resources>
