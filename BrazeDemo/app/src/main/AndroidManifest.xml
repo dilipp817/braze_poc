@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:amazon="http://schemas.amazon.com/apk/res/android"
+    package="com.fnk.braze"
+    android:versionCode="1"
+    android:versionName="1.0">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--fireos permissions starts here-->
+    <!-- This permission ensures that no other application can intercept your ADM messages. -->
+    <permission
+        android:name="com.fnk.braze.permission.RECEIVE_ADM_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.fnk.braze.permission.RECEIVE_ADM_MESSAGE" />
+
+    <!-- This permission allows your app access to receive push notifications from ADM. -->
+    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
+
+    <!-- ADM uses WAKE_LOCK to keep the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--fireos permissions end here-->
 
     <application
         android:name=".BrazeApp"
@@ -15,6 +33,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BrazeDemo"
         tools:targetApi="31">
+
+        <amazon:enable-feature android:name="com.amazon.device.messaging" android:required="false"/>
+
+        <receiver android:name="com.braze.push.BrazeAmazonDeviceMessagingReceiver" android:permission="com.amazon.device.messaging.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+                <action android:name="com.amazon.device.messaging.intent.REGISTRATION" />
+                <category android:name="com.yourapp.packagename" />
+            </intent-filter>
+        </receiver>
+
+
         <activity
             android:name=".ActivityB"
             android:exported="false" />
