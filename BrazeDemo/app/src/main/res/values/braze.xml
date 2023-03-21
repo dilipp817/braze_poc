@@ -20,5 +20,8 @@
 <!--    enabling deeplink in notifications-->
     <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 
+<!--    settings for fireos-->
+    <bool name="com_braze_push_adm_messaging_registration_enabled">true</bool>
+
 
 </resources>
